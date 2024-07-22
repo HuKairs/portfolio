@@ -20,7 +20,7 @@ body {
 #blob {
   background-color: white;
   height: 34vmax;
-  width: 34vmax; /* Ensure width is defined */
+  width: 34vmax;
   position: absolute;
   left: 50%;
   top: 50%;
