@@ -1,5 +1,4 @@
 /* -- Glow effect -- */
-
 const blob = document.getElementById("blob");
 
 window.onpointermove = event => { 
@@ -12,7 +11,6 @@ window.onpointermove = event => {
 }
 
 /* -- Text effect -- */
-
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 let interval = null;
@@ -30,7 +28,7 @@ document.querySelector("h1").onmouseover = event => {
           return event.target.dataset.value[index];
         }
       
-        return letters[Math.floor(Math.random() * 26)]
+        return letters[Math.floor(Math.random() * 26)];
       })
       .join("");
     
