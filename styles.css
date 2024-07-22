@@ -2,7 +2,9 @@ body {
   background-color: black;
   height: 100vh;
   margin: 0;
-  overflow: hidden; 
+  overflow-x: hidden;
+  color: white;
+  font-family: 'Space Mono', monospace;
 }
 
 @keyframes rotate {
@@ -56,4 +58,31 @@ h1 {
   transform: translate(-50%, -50%);
   z-index: 3;
 }
+
+.content {
+  padding-top: 100vh;
+}
+
+.text {
+  font-size: 2rem;
+  margin: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.text.left {
+  text-align: left;
+}
+
+.text.right {
+  text-align: right;
+}
+
+.text:hover {
+  color: black;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transform: scale(1.05);
+}
+
 
