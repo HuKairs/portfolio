@@ -30,7 +30,8 @@ body {
   animation: rotate 20s infinite;
   opacity: 0.8;
   filter: blur(15vmax); /* Apply strong blur effect */
-  z-index: 1; /* Make sure the blob is behind the blur div */
+  pointer-events: none; /* Ensure the blob doesn't interfere with pointer events */
+  z-index: 1;
 }
 
 #blur {
@@ -38,7 +39,7 @@ body {
   width: 100%;
   position: absolute;
   z-index: 2;
-  backdrop-filter: blur(50px); /* Adjust the blur strength */
+  backdrop-filter: blur(12vmax);
 }
 
 h1 {
@@ -55,3 +56,4 @@ h1 {
   transform: translate(-50%, -50%);
   z-index: 3;
 }
+
