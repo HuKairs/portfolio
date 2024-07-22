@@ -23,20 +23,22 @@ body {
   background-color: white;
   height: 34vmax;
   aspect-ratio: 1;
-  position: absolute;
+  position: fixed; /* Changed to fixed to keep it in place */
   left: 50%;
   top: 50%;
-  translate: -50% -50%;
+  transform: translate(-50%, -50%);
   border-radius: 50%;
   background: linear-gradient(to right, aquamarine, mediumpurple);
   animation: rotate 20s infinite;
   opacity: 0.8;
+  filter: blur(15vmax); /* Ensure it is always blurred */
+  z-index: 1;
 }
 
 #blur {
   height: 100%;
   width: 100%;
-  position: absolute;
+  position: fixed; /* Changed to fixed to keep it in place */
   z-index: 2;
   backdrop-filter: blur(12vmax);
 }
@@ -63,7 +65,7 @@ h1 {
 .text-container {
   display: flex;
   justify-content: center;
-  margin: 3rem 0; /* Adjusted margin to space out the text */
+  margin: 1.5rem 0; /* Adjusted margin to space out the text */
 }
 
 .text-container.left {
@@ -75,7 +77,7 @@ h1 {
 }
 
 .text {
-  font-size: clamp(1.5rem, 2vw, 2.5rem); /* Adjust the font size */
+  font-size: clamp(1rem, 1.5vw, 2rem); /* Made the text smaller */
   color: white;
   background-color: transparent;
   padding: 0.5rem 1rem;
@@ -89,3 +91,4 @@ h1 {
   background-color: white;
   transform: scale(1.05);
 }
+
