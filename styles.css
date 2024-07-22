@@ -63,26 +63,32 @@ h1 {
   padding-top: 100vh;
 }
 
+.text-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.text-container.left {
+  justify-content: flex-start;
+}
+
+.text-container.right {
+  justify-content: flex-end;
+}
+
 .text {
-  font-size: 2rem;
-  margin: 2rem;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  color: white;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
   transition: all 0.3s ease-in-out;
-}
-
-.text.left {
-  text-align: left;
-}
-
-.text.right {
-  text-align: right;
+  font-family: 'Space Mono', monospace;
 }
 
 .text:hover {
   color: black;
   background-color: white;
-  padding: 1rem;
-  border-radius: 0.5rem;
   transform: scale(1.05);
 }
-
-
