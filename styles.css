@@ -9,13 +9,15 @@ body {
 
 @keyframes rotate {
   from {
-    transform: rotate(0deg);
+    rotate: 0deg;
   }
+  
   50% {
-    transform: scale(1, 1.5);
+    scale: 1 1.5;
   }
+  
   to {
-    transform: rotate(360deg);
+    rotate: 360deg;
   }
 }
 
@@ -26,12 +28,11 @@ body {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  translate: -50% -50%;
   border-radius: 50%;
   background: linear-gradient(to right, aquamarine, mediumpurple);
   animation: rotate 20s infinite;
   opacity: 0.8;
-  z-index: 1;
 }
 
 #blur {
