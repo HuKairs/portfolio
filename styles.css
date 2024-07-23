@@ -57,38 +57,6 @@ h1 {
   z-index: 3;
 }
 
-.text-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 1.5rem 0; /* Adjusted margin to space out the text */
-  position: relative;
-}
-
-.text-container.left {
-  justify-content: flex-start;
-}
-
-.text-container.right {
-  justify-content: flex-end;
-}
-
-.text {
-  font-size: clamp(1rem, 1.5vw, 2rem); /* Made the text smaller */
-  color: white;
-  background-color: transparent;
-  padding: 0.5rem 1rem;
-  border-radius: 1rem;
-  transition: all 0.3s ease-in-out;
-  font-family: 'Space Mono', monospace;
-}
-
-.text:hover {
-  color: black;
-  background-color: white;
-  transform: scale(1.05);
-}
-
 .image {
   width: 100px; /* Adjust the size as needed */
   height: auto;
