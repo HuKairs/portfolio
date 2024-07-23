@@ -1,6 +1,5 @@
 body {
-  background-color: black;
-  height: 200vh; /* Ensure enough height for scrolling */
+  background-color: linear-gradient(0deg,#00000c,#000034,#000050);
   margin: 0;
   overflow-x: hidden;
   color: white;
