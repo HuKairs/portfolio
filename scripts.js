@@ -1,7 +1,6 @@
 /* -- Glow effect -- */
 
 const blob = document.getElementById("blob");
-const blur = document.getElementById("blur");
 
 window.onpointermove = event => { 
   const { clientX, clientY } = event;
@@ -41,17 +40,4 @@ document.querySelector("h1").onmouseover = event => {
     
     iteration += 1 / 3;
   }, 30);
-}
-
-window.onscroll = () => {
-  const scrollY = window.scrollY;
-  const windowHeight = window.innerHeight;
-  const blobHeight = blob.offsetHeight;
-  
-  // Calculate opacity based on scroll position
-  let opacity = 1 - (scrollY / windowHeight);
-  if (opacity < 0) opacity = 0;
-
-  blob.style.opacity = opacity;
-  blur.style.opacity = opacity;
 }
