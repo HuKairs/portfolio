@@ -23,7 +23,7 @@ body {
   background-color: white;
   height: 34vmax;
   aspect-ratio: 1;
-  position: fixed; /* Changed to fixed to keep it in place */
+  position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -31,14 +31,13 @@ body {
   background: linear-gradient(to right, aquamarine, mediumpurple);
   animation: rotate 20s infinite;
   opacity: 0.8;
-  filter: blur(15vmax); /* Ensure it is always blurred */
   z-index: 1;
 }
 
 #blur {
   height: 100%;
   width: 100%;
-  position: fixed; /* Changed to fixed to keep it in place */
+  position: absolute;
   z-index: 2;
   backdrop-filter: blur(12vmax);
 }
