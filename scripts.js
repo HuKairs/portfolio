@@ -41,3 +41,19 @@ document.querySelector("h1").onmouseover = event => {
     iteration += 1 / 3;
   }, 30);
 }
+
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('mousemove', (e) => {
+        const rect = link.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const rotateX = (y / rect.height - 0.5) * 10; // Adjust the tilt intensity
+        const rotateY = (x / rect.width - 0.5) * -10; // Adjust the tilt intensity
+        link.style.setProperty('--rotate-angle', `${rotateX}deg ${rotateY}deg`);
+    });
+
+    link.addEventListener('mouseleave', () => {
+        link.style.setProperty('--rotate-angle', '0deg 0deg');
+    });
+});
+
