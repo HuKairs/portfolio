@@ -1,48 +1,21 @@
 body {
-  background-color: black;
+  background-color: white;
   height: 100vh;
-  margin: 0;
-  overflow-x: hidden;
+  margin: 0rem;
+  overflow: hidden;
   color: white;
   font-family: 'Space Mono', monospace;
-  background: linear-gradient(to bottom, #000000, #00008b); /* Gradient from black to dark blue */
-}
-
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  background: transparent;
-  z-index: 4;
-  padding: 1rem;
-}
-
-nav {
-  display: flex;
-  gap: 2rem;
-}
-
-.nav-link {
-  color: white;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-decoration: none;
-  transition: transform 0.3s ease-in-out;
-}
-
-.nav-link:hover {
-  transform: scale(1.1) rotate(5deg);
 }
 
 @keyframes rotate {
   from {
     rotate: 0deg;
   }
+  
   50% {
     scale: 1 1.5;
   }
+  
   to {
     rotate: 360deg;
   }
@@ -70,25 +43,30 @@ nav {
   backdrop-filter: blur(12vmax);
 }
 
-.content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  z-index: 3;
-  position: relative;
-}
-
-.content h1 {
-  font-size: clamp(2rem, 5vw, 10rem);
-  color: white;
-  margin: 0;
-  padding: 0;
+h1 {
   font-family: 'Space Mono', monospace;
-  transition: transform 0.3s ease-in-out;
+  font-size: clamp(3rem, 10vw, 10rem);
+  color: white;
+  white-space: nowrap;
+  padding: 0 clamp(1rem, 2vw, 3rem);
+  border-radius: clamp(0.4rem, 0.75vw, 1rem);
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
 }
 
-.content h1:hover {
-  transform: scale(1.1) rotate(5deg);
+.image {
+  width: 100px; /* Adjust the size as needed */
+  height: auto;
+  border-radius: 1rem;
+  margin: 0 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.image:hover {
+  transform: scale(1.05);
 }
 
