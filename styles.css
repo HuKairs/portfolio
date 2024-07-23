@@ -1,73 +1,35 @@
 body {
-  background-color: white;
-  height: 100vh;
-  margin: 0rem;
-  overflow: hidden;
-  color: white;
-  font-family: 'Space Mono', monospace;
+    background-color: white;
+    height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+    color: black;
+    font-family: 'Space Mono', monospace;
 }
 
-@keyframes rotate {
-  from {
-    rotate: 0deg;
-  }
-  
-  50% {
-    scale: 1 1.5;
-  }
-  
-  to {
-    rotate: 360deg;
-  }
+.top-nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    background: transparent;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
 }
 
-#blob {
-  background-color: white;
-  height: 34vmax;
-  aspect-ratio: 1;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  translate: -50% -50%;
-  border-radius: 50%;
-  background: linear-gradient(to right, aquamarine, mediumpurple);
-  animation: rotate 20s infinite;
-  opacity: 0.8;
+.nav-link {
+    color: black;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: small;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
 }
 
-#blur {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  z-index: 2;
-  backdrop-filter: blur(12vmax);
+.nav-link:hover {
+    transform: scale(1.1) rotate(var(--rotate-angle));
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-h1 {
-  font-family: 'Space Mono', monospace;
-  font-size: clamp(3rem, 10vw, 10rem);
-  color: white;
-  white-space: nowrap;
-  padding: 0 clamp(1rem, 2vw, 3rem);
-  border-radius: clamp(0.4rem, 0.75vw, 1rem);
-  margin: 0;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 3;
-}
-
-.image {
-  width: 100px; /* Adjust the size as needed */
-  height: auto;
-  border-radius: 1rem;
-  margin: 0 1rem;
-  transition: all 0.3s ease-in-out;
-}
-
-.image:hover {
-  transform: scale(1.05);
-}
 
 
