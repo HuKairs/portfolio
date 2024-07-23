@@ -58,11 +58,6 @@ h1 {
   z-index: 3;
 }
 
-.content {
-  padding-top: 100vh; /* Adjust padding to ensure you need to scroll */
-  background: linear-gradient(black, darkblue); /* Gradient background for the lower half */
-}
-
 .text-container {
   display: flex;
   justify-content: space-between;
@@ -105,13 +100,6 @@ h1 {
 
 .image:hover {
   transform: scale(1.05);
-}
-
-/* Hide the blob when scrolling down */
-@media (min-height: 100vh) {
-  body:not(:hover) #blob {
-    display: none;
-  }
 }
 
 
