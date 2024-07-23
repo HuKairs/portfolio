@@ -1,35 +1,92 @@
 body {
-    background-color: white;
-    height: 100vh;
-    margin: 0;
-    overflow-x: hidden;
-    color: black;
-    font-family: 'Space Mono', monospace;
+  background-color: black;
+  height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  color: white;
+  font-family: 'Space Mono', monospace;
 }
 
-.top-nav {
-    display: flex;
-    justify-content: space-around;
-    padding: 1rem;
-    background: transparent;
-    position: fixed;
-    width: 100%;
-    z-index: 10;
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: transparent;
+  z-index: 4;
+  padding: 1rem;
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
 }
 
 .nav-link {
-    color: black;
-    text-decoration: underline;
-    font-weight: bold;
-    font-size: small;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: inline-block;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out;
 }
 
 .nav-link:hover {
-    transform: scale(1.1) rotate(var(--rotate-angle));
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1) rotate(5deg);
 }
 
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+  50% {
+    scale: 1 1.5;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
 
+#blob {
+  background-color: white;
+  height: 34vmax;
+  aspect-ratio: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: linear-gradient(to right, aquamarine, mediumpurple);
+  animation: rotate 20s infinite;
+  opacity: 0.8;
+}
 
+#blur {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  backdrop-filter: blur(12vmax);
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  z-index: 3;
+  position: relative;
+}
+
+.content h1 {
+  font-size: clamp(2rem, 5vw, 10rem);
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-family: 'Space Mono', monospace;
+  transition: transform 0.3s ease-in-out;
+}
+
+.content h1:hover {
+  transform: scale(1.1) rotate(5deg);
+}
