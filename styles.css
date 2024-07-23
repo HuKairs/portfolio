@@ -5,6 +5,7 @@ body {
   overflow-x: hidden;
   color: white;
   font-family: 'Space Mono', monospace;
+  background: linear-gradient(to bottom, #000000, #00008b); /* Gradient from black to dark blue */
 }
 
 header {
@@ -24,7 +25,7 @@ nav {
 }
 
 .nav-link {
-  color: black;
+  color: white;
   font-size: 1.2rem;
   font-weight: bold;
   text-decoration: none;
@@ -90,3 +91,4 @@ nav {
 .content h1:hover {
   transform: scale(1.1) rotate(5deg);
 }
+
