@@ -32,10 +32,11 @@ body {
   animation: rotate 20s infinite;
   opacity: 0.8;
   z-index: 1;
+  display: block; /* Ensure it is displayed */
 }
 
 #blur {
-  height: 50vh; /* Limit the blur effect to the top half */
+  height: 100vh; /* Cover the entire viewport */
   width: 100%;
   position: absolute;
   top: 0;
@@ -53,13 +54,13 @@ h1 {
   margin: 0;
   position: absolute;
   left: 50%;
-  top: 25%;
+  top: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
 }
 
 .content {
-  padding-top: 120vh; /* Adjust padding to ensure you need to scroll to see the text at the bottom */
+  padding-top: 100vh; /* Adjust padding to ensure you need to scroll */
   background: linear-gradient(black, darkblue); /* Gradient background for the lower half */
 }
 
@@ -67,7 +68,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 1.5rem 0;
+  margin: 1.5rem 0; /* Adjusted margin to space out the text */
   position: relative;
 }
 
@@ -80,7 +81,7 @@ h1 {
 }
 
 .text {
-  font-size: clamp(1rem, 1.5vw, 2rem);
+  font-size: clamp(1rem, 1.5vw, 2rem); /* Made the text smaller */
   color: white;
   background-color: transparent;
   padding: 0.5rem 1rem;
@@ -105,5 +106,12 @@ h1 {
 
 .image:hover {
   transform: scale(1.05);
+}
+
+/* Hide the blob when scrolling down */
+@media (min-height: 100vh) {
+  body:not(:hover) #blob {
+    display: none;
+  }
 }
 
