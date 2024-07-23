@@ -1,6 +1,6 @@
 body {
   background-color: black;
-  height: 100vh;
+  height: 200vh; /* Ensure enough height for scrolling */
   margin: 0;
   overflow-x: hidden;
   color: white;
@@ -9,15 +9,15 @@ body {
 
 @keyframes rotate {
   from {
-    transform: rotate(0deg);
+    rotate: 0deg;
   }
   
   50% {
-    transform: scale(1, 1.5);
+    scale: 1 1.5;
   }
   
   to {
-    transform: rotate(360deg);
+    rotate: 360deg;
   }
 }
 
@@ -28,12 +28,11 @@ body {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  translate: -50% -50%;
   border-radius: 50%;
   background: linear-gradient(to right, aquamarine, mediumpurple);
   animation: rotate 20s infinite;
   opacity: 0.8;
-  transition: opacity 0.5s ease-out;
 }
 
 #blur {
@@ -42,7 +41,6 @@ body {
   position: absolute;
   z-index: 2;
   backdrop-filter: blur(12vmax);
-  transition: opacity 0.5s ease-out;
 }
 
 h1 {
@@ -61,13 +59,16 @@ h1 {
 }
 
 .content {
-  padding-top: 120vh; /* Adjust padding to ensure you need to scroll */
+  padding-top: 100vh; /* Adjust padding to ensure you need to scroll */
+  background: linear-gradient(black, darkblue); /* Gradient background for the lower half */
 }
 
 .text-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   margin: 1.5rem 0; /* Adjusted margin to space out the text */
+  position: relative;
 }
 
 .text-container.left {
@@ -94,6 +95,23 @@ h1 {
   transform: scale(1.05);
 }
 
+.image {
+  width: 100px; /* Adjust the size as needed */
+  height: auto;
+  border-radius: 1rem;
+  margin: 0 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.image:hover {
+  transform: scale(1.05);
+}
+
+/* Hide the blob when scrolling down */
+@media (min-height: 100vh) {
+  body:not(:hover) #blob {
+    display: none;
   }
 }
+
 
