@@ -61,3 +61,22 @@ document.addEventListener('mouseout', () => {
     iteration += 1 / 3;
   }, 30);
 }
+
+/* --Music-- */
+
+// Wait for 10 seconds before playing the music
+setTimeout(() => {
+    const music = document.getElementById('jazz_1');
+    music.play();
+}, 10000);
+
+// Mute button functionality
+const muteButton = document.getElementById('mute-button');
+const music = document.getElementById('jazz_1');
+let isMuted = false;
+
+muteButton.addEventListener('click', () => {
+    isMuted = !isMuted;
+    music.muted = isMuted;
+    muteButton.textContent = isMuted ? 'Unmute' : 'Mute';
+});
