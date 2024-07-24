@@ -130,6 +130,24 @@ h1 {
   transform: scale(1.05);
 }
 
+#mute-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+#mute-button:hover {
+  background-color: #555;
+}
+
+
   transform: scale(1.05);
 }
 
